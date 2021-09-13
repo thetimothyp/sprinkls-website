@@ -5,6 +5,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./index.scss";
 import MailchimpForm from "../components/mailchimp-form";
+import Sprinkles from "../components/sprinkles";
 
 // markup
 const IndexPage = () => {
@@ -23,6 +24,7 @@ const IndexPage = () => {
         </div>
         <MailchimpForm />
       </div>
+      <Sprinkles />
     </main>
   )
 }
