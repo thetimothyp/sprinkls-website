@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import { BiRightArrowAlt } from 'react-icons/bi';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 import './mailchimp-form.scss';
 
 const MailchimpForm = () => {
   const [email, setEmail] = useState('');
+  const [error, setError] = useState(null);
+  const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(email);
+    const res = await addToMailchimp(email);
+    if (res.result === 'success') {
+      setSubscribed(true);
+      setError(null);
+    } else {
+      setError('Please enter a valid email address.');
+    }
   }
 
   return (
@@ -25,6 +34,17 @@ const MailchimpForm = () => {
           <BiRightArrowAlt color="#FFF" size={24}/>
         </button>
       </form>
+      {error && (
+        <div className="subscribed-annotation">
+          <p className="error">{error}</p>
+        </div>
+      )}
+      {subscribed && (
+        <div className="subscribed-annotation">
+          🎉
+          <p>Subscribed!</p>
+        </div>
+      )}
     </div>
   )
 };

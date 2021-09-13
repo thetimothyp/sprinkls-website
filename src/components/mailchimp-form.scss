@@ -53,3 +53,23 @@ $red: #f4305f;
     background-color: #dc0a3b;
   }
 }
+
+.subscribed-annotation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12pt;
+  margin-top: 8px;
+  position: absolute;
+
+  .error {
+    color: $red;
+    margin-left: 0;
+  }
+
+  p {
+    margin-left: 12px;
+    font-size: inherit;
+    letter-spacing: 0.02rem;
+  }
+}
