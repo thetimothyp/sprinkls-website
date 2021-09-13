@@ -1,0 +1,52 @@
+$red: #f4305f;
+$dark-gray: #5e5b69;
+
+header {
+  position: absolute;
+}
+
+.page {
+  color: #232129;
+  padding: 0 96px;
+  font-family: "Roboto", sans-serif, serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  color: $red;
+  font-family: "Roboto", sans-serif, serif;
+  font-weight: 700;
+  font-size: 28pt;
+  margin: 36px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+
+  h1 {
+    font-size: 42pt;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18pt;
+    font-weight: 300;
+  }
+}
+
+.description {
+  max-width: 800px;
+  text-align: center;
+}
+
+p {
+  color: $dark-gray;
+  letter-spacing: 0.02rem;
+  line-height: 1.7rem;
+}
