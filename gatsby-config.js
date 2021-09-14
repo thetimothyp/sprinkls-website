@@ -3,6 +3,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Sprinkls",
   },
+  pathPrefix: "/sprinkls-website",
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
